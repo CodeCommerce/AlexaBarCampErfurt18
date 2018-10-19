@@ -1,0 +1,12 @@
+{
+    "require": {
+        "codecommerce/alexaapi": "^1.0"
+    },
+    "repositories": {
+        "codecommerce/alexaapi": {
+            "type": "path",
+            "url": "./VoiceApi"
+        }
+    }
+
+}

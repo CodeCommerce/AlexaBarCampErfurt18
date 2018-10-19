@@ -1,0 +1,3 @@
+[submodule "VoiceApi"]
+	path = VoiceApi
+	url = git@github.com:CodeCommerce/VoiceApi.git
