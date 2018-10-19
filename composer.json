@@ -7,6 +7,10 @@
             "type": "path",
             "url": "./VoiceApi"
         }
+    },
+    "autoload": {
+        "psr-4": {
+            "BarCamp\\Alexa\\": "./Alexa"
+        }
     }
-
 }

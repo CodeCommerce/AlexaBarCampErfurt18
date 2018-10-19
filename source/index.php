@@ -1,5 +1,13 @@
 <?php
 
-require_once '../vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
-$alexaApi = new CodeCommerce\AlexaApi\Controller\ResponseHandler(json_decode(file_get_contents('php://input')));
+$bTest = true;
+
+if ($bTest) {
+    $json = json_decode(file_get_contents(__DIR__ . "/RequestTests/NextSessionRequest.json"));
+} else {
+    $json = json_decode(file_get_contents('php://input'));
+}
+
+$alexaApi = new CodeCommerce\AlexaApi\Controller\RequestHandler($json);

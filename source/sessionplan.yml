@@ -1,0 +1,11 @@
+Sessions:
+  '02:00':
+    'Couching': 'Potatoe'
+  '11:00':
+    'Theater': 'CodeCommerce'
+    'Sport': 'Sporthalle'
+    'Voice Interfaces': 'Google Hauptquartier'
+  '13:00':
+    'Programmierung': 'Schule'
+    'Werken': 'Keller'
+    'Aufräumen': 'Küche'
