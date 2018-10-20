@@ -1,0 +1,17 @@
+{
+  "session": [],
+  "version": "1.0",
+  "response": {
+    "directives": [],
+    "outputSpeech": {
+      "type": "SSML",
+      "text": null,
+      "ssml": {
+        "text": "<speak>Folgende Sessions finden um  <say-as interpret-as='time'>11:00</say-as>  statt. <s>Im Raum CodeCommerce findet die Session Theater statt.</s> <s>Im Raum Sporthalle findet die Session Sport statt.</s> <s>Im Raum Google Hauptquartier findet die Session Voice Interfaces statt.</s> </speak>"
+      },
+      "playBehavior": "ENQUEUE"
+    },
+    "reprompt": null,
+    "shouldEndSession": null
+  }
+}

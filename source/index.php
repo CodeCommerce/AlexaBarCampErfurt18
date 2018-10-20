@@ -4,7 +4,9 @@ use Monolog\Handler\StreamHandler;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$bTest = false;
+die(__DIR__ . "/RequestTests/Response.json");
+
+$bTest = true;
 
 $logger = new Monolog\Logger('requestlog');
 
