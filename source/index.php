@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$bTest = true;
+$bTest = false;
 
 if ($bTest) {
     $json = json_decode(file_get_contents(__DIR__ . "/RequestTests/NextSessionRequest.json"));
