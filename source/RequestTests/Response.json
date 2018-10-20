@@ -1,36 +1,10 @@
 {
   "version": "1.0",
   "response": {
-    "directives": [
-      {
-        "type": "Display.RenderTemplate",
-        "template": {
-          "type": "BodyTemplate2",
-          "token": null,
-          "backButton": "VISIBLE",
-          "backgroundImage": {
-            "contentDescription": "TestDesc",
-            "sources": [
-              {
-                "url": "https://www.codecommerce.de/wp-content/uploads/2018/04/18403105_1372829509477095_2872277146168686090_n-316x316.jpg"
-              }
-            ]
-          },
-          "title": "Testtitel",
-          "textContent": {
-            "primaryText": {
-              "text": "Testing Primary",
-              "type": "PlainText"
-            }
-          }
-        }
-      }
-    ],
     "outputSpeech": {
-      "type": "PlainText",
-      "text": "Hallo Herr Mustermann - wie geht es ihnen",
-      "ssml": null,
-      "playBehavior": null
+      "type": "SSML",
+      "ssml": "<speak>Folgende Sessions finden um  <say-as interpret-as='time'>11:00</say-as>  statt. <s>Im Raum CodeCommerce findet die Session Theater statt.</s> <s>Im Raum Sporthalle findet die Session Sport statt.</s> <s>Im Raum Google Hauptquartier findet die Session Voice Interfaces statt.</s> </speak>",
+      "playBehavior": "ENQUEUE"
     },
     "reprompt": null,
     "shouldEndSession": null

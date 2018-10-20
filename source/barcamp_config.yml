@@ -1,7 +1,12 @@
+BarCamp:
+  Datum:
+    von: 17.11.2018
+    bis: 18.11.2018
+  Lokation: KinderMedienZentrum, Erich-Kästner-Straße 1, 99094 Erfurt
 Sessions:
   '02:00':
     'Couching': 'Potatoe'
-  '11:00':
+  '11:30':
     'Theater': 'CodeCommerce'
     'Sport': 'Sporthalle'
     'Voice Interfaces': 'Google Hauptquartier'

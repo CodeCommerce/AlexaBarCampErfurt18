@@ -33,12 +33,16 @@ class NextSessionIntent implements IntentsInterface
      */
     public function runIntent()
     {
-        $config = Yaml::parseFile(__DIR__ . '/../../source/sessionplan.yml');
+        $config = Yaml::parseFile(__DIR__ . '/../../source/barcamp_config.yml');
         $cur_time = date('H:i');
 
         if ($sessions = $config['Sessions']) {
             $sessionSlotTime = $this->getNextTimeSlotSessions($sessions, $cur_time);
-            $this->renderResponse($sessionSlotTime, $sessions[$sessionSlotTime]);
+            $sessionSlot = null;
+            if (null != $sessionSlotTime) {
+                $sessionSlot = $sessions[$sessionSlotTime];
+            }
+            $this->renderResponse($sessionSlotTime, $sessionSlot);
         }
     }
 
@@ -47,13 +51,17 @@ class NextSessionIntent implements IntentsInterface
         $outSpeech = new Outspeech();
 
         $ssml = new SSML();
-        $ssml->addText('Folgende Sessions finden um ')
-            ->addTime($time)
-            ->addText(' statt.');
 
 
-        foreach ($sessionSlot as $session => $room) {
-            $ssml->addSentence('Im Raum ' . $room . ' findet die Session ' . $session . ' statt.');
+        if ($sessionSlot) {
+            $ssml->addText('Folgende Sessions finden um ')
+                ->addTime($time)
+                ->addText(' statt.');
+            foreach ($sessionSlot as $session => $room) {
+                $ssml->addSentence('Im Raum ' . $room . ' findet die Session ' . $session . ' statt.');
+            }
+        } else {
+            $ssml->addText('Heute findet leider keine weitere Session statt.');
         }
         $outSpeech->setType($outSpeech::TYPE_SSML)
             ->setSsml($ssml);

@@ -1,17 +1,14 @@
 <?php
+require __DIR__ . '/../vendor/autoload.php';
 
 use Monolog\Handler\StreamHandler;
 
-require __DIR__ . '/../vendor/autoload.php';
-
-die(file_get_contents(__DIR__ . "/RequestTests/Response.json"));
-
-$bTest = true;
+$bTest = false;
 
 $logger = new Monolog\Logger('requestlog');
 
 if ($bTest) {
-    $json = json_decode(file_get_contents(__DIR__ . "/RequestTests/NextSessionRequest.json"));
+    $json = json_decode(file_get_contents(__DIR__ . "/RequestTests/NextBarcampRequest.json"));
 } else {
     $json = json_decode(file_get_contents('php://input'));
     $f = fopen(__DIR__ . "/../log/request_" . date("His_dmY") . ".log", "a+");

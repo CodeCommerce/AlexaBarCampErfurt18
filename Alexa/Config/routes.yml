@@ -1,1 +1,2 @@
 NextSession: BarCamp\Alexa\Intents\NextSessionIntent
+NextBarcamp: BarCamp\Alexa\Intents\NextBarcampIntent

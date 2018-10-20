@@ -32,7 +32,7 @@
     "timestamp": "2018-10-20T00:11:55Z",
     "locale": "de-DE",
     "intent": {
-      "name": "NextSession",
+      "name": "NextBarcamp",
       "confirmationStatus": "NONE"
     }
   }
