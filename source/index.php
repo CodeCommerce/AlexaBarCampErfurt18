@@ -4,7 +4,7 @@ use Monolog\Handler\StreamHandler;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-die(__DIR__ . "/RequestTests/Response.json");
+die(file_get_contents(__DIR__ . "/RequestTests/Response.json"));
 
 $bTest = true;
 
