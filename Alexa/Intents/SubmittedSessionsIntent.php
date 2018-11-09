@@ -67,7 +67,7 @@ class SubmittedSessionsIntent implements IntentsInterface
         if ($viewPort = $this->system->getViewport()) {
             $template = new Template();
             if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
-                $template->setBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png');
+                $template->addBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png');
             }
             $directives = new Directives($template);
             $response->setDirectives($directives);
