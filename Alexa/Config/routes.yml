@@ -1,7 +1,4 @@
-# Must
 LaunchRequest: BarCamp\Alexa\Intents\LaunchRequest
-
-# Optional
 NextSession: BarCamp\Alexa\Intents\NextSessionIntent
 NextBarcamp: BarCamp\Alexa\Intents\NextBarcampIntent
 Location: BarCamp\Alexa\Intents\LocationIntent
