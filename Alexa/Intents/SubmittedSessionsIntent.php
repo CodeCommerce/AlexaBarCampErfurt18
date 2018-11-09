@@ -63,8 +63,8 @@ class SubmittedSessionsIntent implements IntentsInterface
     {
         $randomSentence = [
             'Eine weitere Session.',
-            'Weiter gibt es eine Session mit dem Titel ',
-            'Unter anderem eine Session mit dem Titel',
+            'Weiter gibt es eine Session mit dem Titel.',
+            'Unter anderem eine Session mit dem Titel.',
         ];
 
         shuffle($randomSentence);
