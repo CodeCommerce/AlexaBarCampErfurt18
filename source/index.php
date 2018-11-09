@@ -3,7 +3,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Monolog\Handler\StreamHandler;
 
-define('TEST_MODE', true);
+define('TEST_MODE', false);
 
 $logger = new Monolog\Logger('requestlog');
 
