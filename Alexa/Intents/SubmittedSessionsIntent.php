@@ -64,17 +64,17 @@ class SubmittedSessionsIntent implements IntentsInterface
 
         $response = new Response($outSpeech);
 
-//        if ($viewPort = $this->system->getViewport()) {
-//            $template = new Template(Template::BODY_TEMPLATE_1_SIMPLE_TEXT_IMAGES);
-//            $template->setTitle('Hallo')
-//                ->setBackButton($template::BACK_BUTTON_VISIBLE)
-//                ->setPrimary('Text 1');
-//            if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
-//                $template->addBackgroundImage('https://www.codecommerce.de/wp-content/uploads/2018/04/18403105_1372829509477095_2872277146168686090_n-316x316.jpg', 'test');
-//            }
-//            $directives = new Directives($template);
-//            $response->setDirectives($directives);
-//        }
+        if ($viewPort = $this->system->getViewport()) {
+            $template = new Template(Template::BODY_TEMPLATE_1_SIMPLE_TEXT_IMAGES);
+            $template->setTitle('Hallo')
+                ->setBackButton($template::BACK_BUTTON_VISIBLE)
+                ->setPrimary('Text 1');
+            if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
+                $template->addBackgroundImage('https://www.codecommerce.de/wp-content/uploads/2018/04/18403105_1372829509477095_2872277146168686090_n-316x316.jpg', 'test');
+            }
+            $directives = new Directives($template);
+            $response->setDirectives($directives);
+        }
 
         $responseBody = new ResponseBody($response);
         new ResponseHandler($responseBody);
