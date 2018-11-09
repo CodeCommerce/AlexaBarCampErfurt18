@@ -75,7 +75,7 @@ class SubmittedSessionsIntent implements IntentsInterface
                     'test'
                 );
             }
-            if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SHOW1)) {
+            if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SHOW1) || $viewPort->isDevice($viewPort::DEVICE_TYPE_SHOW2)) {
                 $template->addBackgroundImage(
                     'https://c1.staticflickr.com/2/1654/24166023156_0ea6459e0f_b.jpg',
                     'test'
