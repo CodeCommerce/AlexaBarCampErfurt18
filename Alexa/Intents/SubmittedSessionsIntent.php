@@ -68,7 +68,7 @@ class SubmittedSessionsIntent implements IntentsInterface
 //                ->setBackButton($template::BACK_BUTTON_VISIBLE)
 //                ->setPrimary('Text 1');
             if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
-                $response->setDirectives($this->getTestDirective());
+//                $response->setDirectives($this->getTestDirective());
 //                $template->addBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png', 'test');
             }
 //            $directives = new Directives($template);
