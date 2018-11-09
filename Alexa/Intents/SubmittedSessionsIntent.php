@@ -42,11 +42,12 @@ class SubmittedSessionsIntent implements IntentsInterface
 
         $i = 1;
         foreach ($sessions as $key => $sessionDetail) {
-            $ssml->addSentence($sessionDetail['title'] . " von " . $sessionDetail['author'])
-                ->addSentence($this->getRandomAddingSentence());
+            $ssml->addSentence($sessionDetail['title'] . " von " . $sessionDetail['author']);
             $i++;
-            if ($i > 5) {
+            if ($i > 2) {
                 break;
+            } else {
+                $ssml->addSentence($this->getRandomAddingSentence());
             }
         }
 
