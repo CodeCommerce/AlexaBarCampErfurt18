@@ -63,18 +63,44 @@ class SubmittedSessionsIntent implements IntentsInterface
         $response = new Response($outSpeech);
 
         if ($viewPort = $this->system->getViewport()) {
-//            $template = new Template(Template::BODY_TEMPLATE_2_IMAGE_LIMITED_CENTERED_TEXT);
-//            $template->setTitle('Hallo')
-//                ->setPrimary('Text 1');
+            $template = new Template(Template::BODY_TEMPLATE_2_IMAGE_LIMITED_CENTERED_TEXT);
+            $template->setTitle('Hallo')
+                ->setBackButton($template::BACK_BUTTON_VISIBLE)
+                ->setPrimary('Text 1');
             if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
-//                $template->addBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png');
+                $template->addBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png', 'test');
             }
-//            $directives = new Directives($template);
-//            $response->setDirectives($directives);
+            $directives = new Directives($template);
+            $response->setDirectives($directives);
         }
 
         $responseBody = new ResponseBody($response);
         new ResponseHandler($responseBody);
+    }
+
+    /**
+     *
+     */
+    protected function getTestDirective()
+    {
+        $backgroundImage = new BackgroundImage();
+        $backgroundImage->setSources('https://www.codecommerce.de/wp-content/uploads/2018/04/18403105_1372829509477095_2872277146168686090_n-316x316.jpg')
+            ->setContentDescription('TestDesc');
+
+        $template = new Template();
+        $template->setType($template::BODY_TEMPLATE_1_SIMPLE_TEXT_IMAGES)
+            ->setBackButton($template::BACK_BUTTON_VISIBLE)
+            ->setBackgroundImage($backgroundImage)
+            ->setTitle('Testtitel')
+            ->setPrimary('Testing Primary')
+            ->setSecondary('Secondary TEsting')
+            ->setTertiary('woar we got it!');
+
+
+        $directive = new Directives();
+        $directive->setTemplate($template);
+
+        return $directive;
     }
 
     protected function getRandomAddingSentence()
