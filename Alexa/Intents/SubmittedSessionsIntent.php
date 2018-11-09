@@ -70,7 +70,16 @@ class SubmittedSessionsIntent implements IntentsInterface
                 ->setBackButton($template::BACK_BUTTON_VISIBLE)
                 ->setPrimary('Text 1');
             if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
-                $template->addBackgroundImage('https://www.codecommerce.de/wp-content/uploads/2018/04/18403105_1372829509477095_2872277146168686090_n-316x316.jpg', 'test');
+                $template->addBackgroundImage(
+                    'https://www.codecommerce.de/wp-content/uploads/2018/04/18403105_1372829509477095_2872277146168686090_n-316x316.jpg',
+                    'test'
+                );
+            }
+            if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SHOW1)) {
+                $template->addBackgroundImage(
+                    'https://c1.staticflickr.com/2/1654/24166023156_0ea6459e0f_b.jpg',
+                    'test'
+                );
             }
             $directives = new Directives($template);
             $response->setDirectives($directives);
