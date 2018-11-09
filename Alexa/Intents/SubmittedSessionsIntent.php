@@ -80,7 +80,7 @@ class SubmittedSessionsIntent implements IntentsInterface
                     'https://c1.staticflickr.com/2/1654/24166023156_0ea6459e0f_b.jpg',
                     'test'
                 )
-                ->setType(Template::BODY_TEMPLATE_2_IMAGE_LIMITED_CENTERED_TEXT);
+                ->setType(Template::BODY_TEMPLATE_3_IMAGE_LIMITED_LEFT_ALIGNED_TEXT);
             }
             $directives = new Directives($template);
             $response->setDirectives($directives);
