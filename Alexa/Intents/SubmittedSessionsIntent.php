@@ -4,12 +4,15 @@ namespace BarCamp\Alexa\Intents;
 
 use CodeCommerce\AlexaApi\Controller\ResponseHandler;
 use CodeCommerce\AlexaApi\Intents\IntentsInterface;
+use CodeCommerce\AlexaApi\Model\BackgroundImage;
+use CodeCommerce\AlexaApi\Model\Directives;
 use CodeCommerce\AlexaApi\Model\Outspeech;
 use CodeCommerce\AlexaApi\Model\Request;
 use CodeCommerce\AlexaApi\Model\Response;
 use CodeCommerce\AlexaApi\Model\ResponseBody;
 use CodeCommerce\AlexaApi\Model\SSML;
 use CodeCommerce\AlexaApi\Model\System;
+use CodeCommerce\AlexaApi\Model\Template;
 use Symfony\Component\Yaml\Yaml;
 
 class SubmittedSessionsIntent implements IntentsInterface
@@ -60,6 +63,16 @@ class SubmittedSessionsIntent implements IntentsInterface
             ->setSsml($ssml);
 
         $response = new Response($outSpeech);
+
+        if ($viewPort = $this->system->getViewport()) {
+            $template = new Template();
+            if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
+                $template->setBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png');
+            }
+            $directives = new Directives($template);
+            $response->setDirectives($directives);
+        }
+
         $responseBody = new ResponseBody($response);
         new ResponseHandler($responseBody);
     }
