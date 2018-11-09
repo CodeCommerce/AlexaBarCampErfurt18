@@ -66,6 +66,6 @@ class SubmittedSessionsIntent implements IntentsInterface
             'Unter anderem eine Session mit dem Titel',
         ];
 
-        return shuffle($randomSentence);
+        return shuffle($randomSentence[rand(0, count($randomSentence - 1))]);
     }
 }
