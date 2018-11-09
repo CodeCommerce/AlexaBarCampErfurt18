@@ -45,9 +45,9 @@ class SubmittedSessionsIntent implements IntentsInterface
                 ->addSentence($this->getRandomAddingSentence($ssml));
         }
 
-//        $ssml->addSentence('Wir hoffen du hast eine spannende Session für dich gefunden.')
-//            ->addSentence('Du kannst jederzeit eine Session einreichen - wir freuen uns darauf.')
-//            ->addSentence('Weitere Informationen findest du unter www.barcamp-erfurt.de');
+        $ssml->addSentence('Wir hoffen du hast eine spannende Session für dich gefunden.')
+            ->addSentence('Du kannst jederzeit eine Session einreichen - wir freuen uns darauf.')
+            ->addSentence('Weitere Informationen findest du unter www.barcamp-erfurt.de');
 
         $outSpeech = new Outspeech();
         $outSpeech->setType($outSpeech::TYPE_SSML)
@@ -66,6 +66,8 @@ class SubmittedSessionsIntent implements IntentsInterface
             'Unter anderem eine Session mit dem Titel',
         ];
 
-        return shuffle($randomSentence[rand(0, count($randomSentence - 1))]);
+        shuffle($randomSentence);
+
+        return $randomSentence[0];
     }
 }
