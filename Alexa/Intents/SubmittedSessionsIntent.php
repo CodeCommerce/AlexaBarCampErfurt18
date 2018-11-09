@@ -65,7 +65,7 @@ class SubmittedSessionsIntent implements IntentsInterface
         $response = new Response($outSpeech);
 
         if ($viewPort = $this->system->getViewport()) {
-            $template = new Template();
+            $template = new Template(Template::BODY_TEMPLATE_2_IMAGE_LIMITED_CENTERED_TEXT);
             if ($viewPort->isDevice($viewPort::DEVICE_TYPE_SPOT)) {
                 $template->addBackgroundImage('https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/FuBK_testcard_vectorized.svg/1536px-FuBK_testcard_vectorized.svg.png');
             }
