@@ -45,7 +45,7 @@ class SubmittedSessionsIntent implements IntentsInterface
             $ssml->addSentence($sessionDetail['title'] . " von " . $sessionDetail['author'])
                 ->addSentence($this->getRandomAddingSentence());
             $i++;
-            if($i > 15)
+            if($i > 10)
                 break;
         }
 
