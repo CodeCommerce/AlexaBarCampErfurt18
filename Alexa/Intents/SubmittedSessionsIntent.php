@@ -37,7 +37,7 @@ class SubmittedSessionsIntent implements IntentsInterface
         $sessions = $config['SubmittedSessions'];
 
         $ssml = new SSML();
-        $ssml->addSentence('Folgende Sessions wurden bisher eingereicht.');
+        $ssml->addSentence('Hier hast du eine kleine Auswahl von Sessions die bisher eingereicht wurden.');
         shuffle($sessions);
 
         $i = 1;
@@ -45,8 +45,9 @@ class SubmittedSessionsIntent implements IntentsInterface
             $ssml->addSentence($sessionDetail['title'] . " von " . $sessionDetail['author'])
                 ->addSentence($this->getRandomAddingSentence());
             $i++;
-            if($i > 10)
+            if ($i > 5) {
                 break;
+            }
         }
 
         $ssml->addSentence('Wir hoffen du hast eine spannende Session für dich gefunden.')
