@@ -65,7 +65,7 @@ class SubmittedSessionsIntent implements IntentsInterface
         $response = new Response($outSpeech);
 
         if ($viewPort = $this->system->getViewport()) {
-            $template = new Template(Template::BODY_TEMPLATE_2_IMAGE_LIMITED_CENTERED_TEXT);
+            $template = new Template(Template::BODY_TEMPLATE_1_SIMPLE_TEXT_IMAGES);
             $template->setTitle('Hallo')
                 ->setBackButton($template::BACK_BUTTON_VISIBLE)
                 ->setPrimary('Text 1');
