@@ -3,12 +3,12 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Monolog\Handler\StreamHandler;
 
-define('TEST_MODE', false);
+define('TEST_MODE', true);
 
 $logger = new Monolog\Logger('requestlog');
 
 if (TEST_MODE) {
-    $json = json_decode(file_get_contents(__DIR__ . "/RequestTests/IntenetRequest.json"));
+    $json = json_decode(file_get_contents(__DIR__ . "/RequestTests/EchoSpotRequest.json"));
 } else {
     $json = json_decode(file_get_contents('php://input'));
     $f = fopen(__DIR__ . "/../log/request_" . date("His_dmY") . ".log", "a+");

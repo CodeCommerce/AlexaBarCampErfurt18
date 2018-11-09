@@ -14,3 +14,92 @@ Sessions:
     'Programmierung': 'Schule'
     'Werken': 'Keller'
     'Aufräumen': 'Küche'
+SubmittedSessions:
+  0:
+    'title' : 'Die Zukunft der Medien liegt in Deinen Händen'
+    'author': 'Imina Geilmann, Luka Naujoks und Nora Wunderwald von TIERINDIR (Online Magazin)'
+    'imageurl': ''
+  1:
+    'title' : 'eSport – Das Phänomen zwischen Sport und Entertainment'
+    'author': 'Adhoc Gaming'
+    'imageurl': ''
+  2:
+    'title' : 'Programmieren mit Kindern'
+    'author': 'Microsoft Projekt "Code your Life"'
+    'imageurl': ''
+  3:
+    'title' : 'Die digitale Gesellschaft – Impulse der Landesregierung (welche Ideen habt ihr?)'
+    'author': 'Staatssekretärin Valentina Kerst'
+    'imageurl': ''
+  4:
+    'title': 'Virtual und Augmented Reality in der Bildungsvermittlung: Sinnvolle Anwendung mit Vermittlungsaspekt oder doch nur grafisch schöne Spielerei?'
+    'author': 'Institut für digitales Lernen'
+    'imageurl': ''
+  5:
+    'title': 'Digitaler Unterricht: Warum es mit WLAN und Smartboard an den Schulen nicht getan ist.'
+    'author': 'Institut für digitales Lernen'
+    'imageurl': ''
+  6:
+    'title': 'Wie funktioniert ein Synthesizer'
+    'author': 'Johannes Kretzschmar'
+    'imageurl': ''
+  7:
+    'title': 'Raspberry Pi, Calliope Mini und ArduBoy im Unterricht? Ideen und Beispiele für Anwendungsfälle'
+    'author': 'Moritz Fromm'
+    'imageurl': ''
+  8:
+    'title': 'Thüringer Initiative stellt eigene Formate vor'
+    'author': 'Kids@Digital'
+    'imageurl': ''
+  9:
+    'title': 'DSGVO – nu isse da. Was seither passiert ist…'
+    'author': 'André Stämmler'
+    'imageurl': ''
+  10:
+    'title': 'Mathe mit dem Smartphone'
+    'author': 'Jörg Kleinsteuber'
+    'imageurl': ''
+  11:
+    'title': 'Open Source Kreislaufwirtschaft Pfandflaschen tauchen deeposits'
+    'author': 'Michael Hülfenhaus'
+    'imageurl': ''
+  12:
+    'title': 'Neues Radio-Format für Kinder'
+    'author': 'Jana Cebulla (MDR Radio Sputnik)'
+    'imageurl': ''
+  13:
+    'title': 'Vorstellung von AppCamps: hochwertige, kostenlose Unterrichtsmaterialien für digitale Themen wie Calliope, Apps, KI, Big Data,etc.'
+    'author': 'Sonja Mewes'
+    'imageurl': ''
+  14:
+    'title': 'Kids Edutrainment, Interactive storytelling bei digitalen Produkten, Nutzung von Designthinking und agilem Projektmanagement in der Produktentwicklung'
+    'author': 'Pati Keilwerth'
+    'imageurl': ''
+  15:
+    'title': 'Mediale Arbeit mit Kindern und Jugendlichen, wie mache ich Radio und Fernsehen mit Verhaltensauffälligen Kindern und Jugendlichen'
+    'author': 'Felix-René Haß'
+    'imageurl': ''
+  16:
+    'title': 'Gaming auf dem Prüfstand, wie mache ich Elternabende mit dem Thema Computer und Konsolenspiele, um Elternarbeit zu leisten'
+    'author': 'Felix-René Haß'
+    'imageurl': ''
+  17:
+    'title': 'Anwendung von Apps bei Auflockerung von Veranstaltungen für & Arbeit mit Kindern'
+    'author': 'Jens-Uwe Peter'
+    'imageurl': ''
+  18:
+    'title': 'Konzept zur Förderung interkultureller Kompetenz durch Musikalische Früherziehung an Musikschulen'
+    'author': 'Ronja Fichtner'
+    'imageurl': ''
+  19:
+    'title': 'Alexa halt den Mund - worauf du achten musst um schmerzfrei einen Alexa Skill entwickeln.'
+    'author': 'Christopher Bauer'
+    'imageurl': ''
+
+
+
+
+
+
+
+
